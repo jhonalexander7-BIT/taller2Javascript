@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>    
+</head>
+<body>
+
+    <ul id="listado">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetuer adipiscing elit</li>
+        <li>Sed mattis enim vitae orci</li>
+        <li>Phasellus libero</li>
+        <li>Maecenas nisl arcu</li>
+    </ul>
+    <button id="añadir">Agregar elemento</button>
+
+    <script>
+        const palabrasArray = [
+        "TVS raider 125", 
+        "BMW s1000rr", 
+        "Yamaha r6", 
+        "Susuki gixxer 250", 
+        "MT09", 
+        "Kawasaki ninja h2r", 
+        "Pulsar ns200", 
+        "Ducati streetfighter v4", 
+        "Susuki AX4", 
+        "Honda CB110"
+        ]
+
+         function agregarPalabraAlAzar() {
+            const palabraAzar = palabrasArray[Math.floor(Math.random() * palabrasArray.length)]
+            const nuevaPalabraAñadida = document.createElement("li")
+            nuevaPalabraAñadida.textContent = palabraAzar
+            document.getElementById("listado").appendChild(nuevaPalabraAñadida)
+        }
+
+        document.getElementById("añadir").addEventListener("click", agregarPalabraAlAzar)
+
+    </script>
+    
+</body>
+</html>
